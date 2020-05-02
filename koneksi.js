@@ -1,14 +1,16 @@
 var mysql = require('mysql');
- 
-//buat koneksi database//
+
+
 const conn = mysql.createConnection({
-    host:'localhost',
+    host: 'localhost',
     user: 'root',
     password: '',
     database: 'bengkel'
 });
+
 conn.connect((err)=>{
-    if (err) throw err;
-    console.log('mysql terkoneksi');
+    if(err) throw err;
+    console.log('Mysql Terkoneksi');
 });
-module.exports= conn;
+
+module.exports = conn;
