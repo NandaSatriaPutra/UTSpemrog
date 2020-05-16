@@ -94,6 +94,10 @@ exports.login = function(req,res){
         }
     });
 } 
+exports.halamanrahasia1 = function(req,res){
+    response.ok("Halaman ini hanya untuk user dengan role = 1( Admin )!",res);
+}
 exports.halamanrahasia = function(req,res){
-    response.ok("halaman ini hanya tersedia untuk user role =2!",res)
+    response.ok("Halaman ini hanya untuk user dengan role = 2( Pelanggan)!",res);
+
 }
