@@ -253,3 +253,18 @@ exports.ubahservice = function (req, res) {
             }
         });
 };
+//level
+exports.ubahlevel = function (req, res) {
+    var id_level = req.body.id_level;
+    var nama_level = req.body.nama_level;
+    var role = req.body.role;
+
+    connection.query('UPDATE t_level SET nama_level=?, role=? WHERE id_level=?', [nama_level, role, id_level],
+        function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Berhasil Ubah Data", res)
+            }
+        });
+};  
