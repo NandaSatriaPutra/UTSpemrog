@@ -268,3 +268,54 @@ exports.ubahlevel = function (req, res) {
             }
         });
 };  
+//hapus data
+//montir
+exports.hapusMontir = function(req, res){
+    var id = req.body.id_montir;
+    connection.query('DELETE FROM t_montir WHERE id_montir=?', [id],
+    function (error, rows, fields) {
+        if (error) {
+            console.log(error);
+        } else {
+            response.ok("Berhasil Hapus Data", res)
+        }
+    });
+};
+//hapus level
+exports.hapuslevel = function(req, res){
+    var id = req.body.id_level;
+    connection.query('DELETE FROM t_level WHERE id_level=?', [id],
+    function (error, rows, fields) {
+        if (error) {
+            console.log(error);
+        } else {
+            response.ok("Berhasil Hapus Data", res)
+        }
+    });
+};
+
+//hapus User
+exports.hapususer = function(req, res){
+    var id = req.body.id;
+    connection.query('DELETE FROM t_user WHERE id=?', [id],
+    function (error, rows, fields) {
+        if (error) {
+            console.log(error);
+        } else {
+            response.ok("Berhasil Hapus Data", res)
+        }
+    });
+}; 
+
+//menghapus data Service
+exports.hapusservice = function(req, res){
+    var id = req.body.id_service;
+    connection.query('DELETE FROM t_service WHERE id_service=?', [id],
+    function (error, rows, fields) {
+        if (error) {
+            console.log(error);
+        } else {
+            response.ok("Berhasil Hapus Data", res)
+        }
+    });
+}; 
