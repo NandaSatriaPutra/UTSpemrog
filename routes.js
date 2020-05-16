@@ -17,9 +17,12 @@ module.exports = function(app){
 
     app.route('/tampilservice')
     .get(jsonku.tampilservice);
-    
+
     app.route('/tambahservice')
     .post(jsonku.tambahservice);
+
+    app.route('/tambahmontir')
+    .post(jsonku.tambahmontir);
 
 
 }
