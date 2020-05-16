@@ -32,9 +32,10 @@ module.exports = function(app){
 
     app.route('/ubahuser')
     .put(jsonku.ubahuser);
-    
+
     app.route('/ubahmontir')
     .put(jsonku.ubahmontir);
 
-
+    app.route('/ubahservice')
+     .put(jsonku.ubahservice);
 }
